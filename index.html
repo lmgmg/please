@@ -14,28 +14,108 @@
         .header {
             background-color: #f9e3d7; /* 연한 갈색 */
             padding: 20px;
-        }
-        
-        .header img {
-            max-width: 100px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+            position: relative;
         }
         
         .title {
-            border-top: 2px solid #ccc; /* 연한 선 */
-            padding-top: 20px;
             font-size: 24px;
             font-weight: bold;
             text-align: center;
+            margin-top: 5px; /* 제목과 선 간격 */
+        }
+        
+        .line {
+            border-top: 2px solid #ccc; /* 연한 선 */
+            margin: 5px 0;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .inner-box {
+            flex: 0 0 calc(33.33% - 20px);
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #ccc;
+            text-align: center;
+        }
+
+        .inner-box .title {
+            font-weight: bold;
+        }
+
+        .sub-box {
+            background-color: #fff;
+            padding: 10px;
+            margin: 5px;
+        }
+        
+        /* 미디어 쿼리: 모바일 기기에 맞춤 */
+        @media (max-width: 767px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .box {
+                flex: 0 0 calc(100% - 20px);
+            }
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <img src="https://via.placeholder.com/100" alt="조그마한 사진">
-        <div class="title">웹페이지 제목</div>
+        <div class="line"></div>
+        <div class="title">경제를 알아야 하는 이유</div>
+    </div>
+    
+    <div class="container">
+            <div class="inner-box">
+                <div class="title">경제를 알아야 하는 이유?</div>
+                <div class="sub-box">
+                    <div class="content">이유
+                    </div>
+                </div>
+            </div>
+            <div class="inner-box">
+                <div class="title">경제를 배우기 위한 방법들</div>
+                <div class="sub-box">
+                    <div class="content">다양한 경제 관련 영상 보기
+                        예를 들어, 슈카월드
+                    </div>
+                </div>
+                <div class="sub-box">
+                    <div class="content">경제 관련 책 읽기
+                        추천 도서 - 장하준의 경제학 레시피, 돈의 속성
+                    </div>
+                </div>
+                <div class="sub-box">
+                    <div class="content">경제 뉴스 자주 접하기</div>
+                </div>
+            </div>
+            <div class="inner-box">
+                <div class="title">경제 문제 해설</div>
+                <div class="sub-box">
+                    <div class="content">1번에 정답이 (3)인 이유</div>
+                </div>
+                <div class="sub-box">
+                    <div class="content">2번에 정답이 (4)인 이유</div>
+                </div>
+                <div class="sub-box">
+                    <div class="content">3번에 정답이 (2)인 이유</div>
+                </div>
+                <div class="sub-box">
+                    <div class="content">4번에 정답이 (3)인 이유</div>
+                </div>
+                <div class="sub-box">
+                    <div class="content">5번에 정답이 (5)인 이유</div>
+                </div>
+                <div class="sub-box">
+                    <div class="content">6번에 정답이 (2)인 이유</div>
+                </div>
+            </div>
     </div>
     
     <!-- 웹페이지 내용 -->
