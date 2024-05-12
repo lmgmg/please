@@ -11,84 +11,34 @@
             font-family: Arial, sans-serif;
         }
         
-        .header, .footer {
-            background-color: #f4e3c1; /* 밝은 갈색 */
+        .header {
+            background-color: #f9e3d7; /* 연한 갈색 */
             padding: 20px;
-            text-align: center;
         }
         
-        .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            min-height: 100vh;
-        }
-        
-        .box {
-            width: calc(33.33% - 20px);
-            background-color: #f0f0f0;
-            margin: 5px 10px;
-            padding: 20px;
-            text-align: center;
+        .header img {
+            max-width: 100px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .title {
+            border-top: 2px solid #ccc; /* 연한 선 */
+            padding-top: 20px;
+            font-size: 24px;
             font-weight: bold;
-            margin-bottom: 10px;
-        }
-        
-        .content {
-            font-style: italic;
-        }
-        
-        /* 미디어 쿼리: 모바일 기기에 맞춤 */
-        @media (max-width: 767px) {
-            .box {
-                width: calc(100% - 20px);
-            }
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>상단 바탕</h1>
+        <img src="https://via.placeholder.com/100" alt="조그마한 사진">
+        <div class="title">웹페이지 제목</div>
     </div>
     
-    <div class="container">
-        <div class="box">
-            <div class="title">제목 1</div>
-            <div class="content">내용 1</div>
-        </div>
-        
-        <div class="box">
-            <div class="title">제목 2</div>
-            <div class="content">내용 2</div>
-        </div>
-        
-        <div class="box">
-            <div class="title">제목 3</div>
-            <div class="content">내용 3</div>
-        </div>
-        
-        <div class="box">
-            <div class="title">제목 4</div>
-            <div class="content">내용 4</div>
-        </div>
-        
-        <div class="box">
-            <div class="title">제목 5</div>
-            <div class="content">내용 5</div>
-        </div>
-        
-        <div class="box">
-            <div class="title">제목 6</div>
-            <div class="content">내용 6</div>
-        </div>
-    </div>
+    <!-- 웹페이지 내용 -->
     
-    <div class="footer">
-        <h1>하단 바탕</h1>
-    </div>
 </body>
 </html>
