@@ -52,6 +52,29 @@
             padding: 10px;
             margin: 5px;
         }
+
+        .footer {
+            background-color: #f9e3d7; /* 연한 갈색 */
+            padding: 20px;
+            text-align: center;
+        }
+
+        #searchInput {
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        #searchButton {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #searchButton:hover {
+            background-color: #45a049;
+        }
         
         /* 미디어 쿼리: 모바일 기기에 맞춤 */
         @media (max-width: 767px) {
@@ -70,7 +93,10 @@
         <div class="line"></div>
         <div class="title">경제를 알아야 하는 이유</div>
     </div>
-    
+
+    <input type="text" id="searchInput" placeholder="검색어를 입력하세요">
+        <button id="searchButton" onclick="search()">검색</button>
+        
     <div class="container">
             <div class="inner-box">
                 <div class="title">경제를 알아야 하는 이유?</div>
@@ -117,6 +143,16 @@
                 </div>
             </div>
     </div>
+
+    <div class="footer"></div>
+
+    <script>
+        function search() {
+            var searchInput = document.getElementById("searchInput").value;
+            var url = "https://search.naver.com/search.naver?query=" + encodeURI(searchInput);
+            window.location.href = url;
+        }
+    </script>
     
     <!-- 웹페이지 내용 -->
     
