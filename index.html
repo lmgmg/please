@@ -11,65 +11,84 @@
             font-family: Arial, sans-serif;
         }
         
-        .header {
+        .header, .footer {
             background-color: #f4e3c1; /* 밝은 갈색 */
             padding: 20px;
             text-align: center;
         }
         
         .container {
-            padding: 20px;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
+            min-height: 100vh;
         }
         
         .box {
             width: calc(33.33% - 20px);
             background-color: #f0f0f0;
-            margin: 10px;
+            margin: 5px 10px;
             padding: 20px;
             text-align: center;
         }
         
-        .divider {
-            width: calc(50% - 20px);
-            background-color: #ccc;
-            height: 100px;
-            margin: 10px;
+        .title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .content {
+            font-style: italic;
         }
         
         /* 미디어 쿼리: 모바일 기기에 맞춤 */
         @media (max-width: 767px) {
-            .container {
-                flex-direction: column;
-            }
-            
-            .box, .divider {
-                width: calc(100% - 40px);
+            .box {
+                width: calc(100% - 20px);
             }
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>모바일 기기를 위한 반응형 웹페이지</h1>
+        <h1>상단 바탕</h1>
     </div>
     
     <div class="container">
-        <!-- 3개의 박스 -->
-        <div class="box">박스 1</div>
-        <div class="box">박스 2</div>
-        <div class="box">박스 3</div>
+        <div class="box">
+            <div class="title">제목 1</div>
+            <div class="content">내용 1</div>
+        </div>
         
-        <!-- 구분선 -->
-        <div class="divider"></div>
-        <div class="divider"></div>
-        <div class="divider"></div>
-        <div class="divider"></div>
-        <div class="divider"></div>
-        <div class="divider"></div>
+        <div class="box">
+            <div class="title">제목 2</div>
+            <div class="content">내용 2</div>
+        </div>
+        
+        <div class="box">
+            <div class="title">제목 3</div>
+            <div class="content">내용 3</div>
+        </div>
+        
+        <div class="box">
+            <div class="title">제목 4</div>
+            <div class="content">내용 4</div>
+        </div>
+        
+        <div class="box">
+            <div class="title">제목 5</div>
+            <div class="content">내용 5</div>
+        </div>
+        
+        <div class="box">
+            <div class="title">제목 6</div>
+            <div class="content">내용 6</div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <h1>하단 바탕</h1>
     </div>
 </body>
 </html>
