@@ -2,68 +2,74 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>반응형 웹페이지 예제</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 웹페이지</title>
     <style>
-        /* 기본 스타일 설정 */
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
         }
-
-        /* 헤더 스타일 */
-        header {
-            background-color: #333;
-            color: white;
+        
+        .header {
+            background-color: #f4e3c1; /* 밝은 갈색 */
+            padding: 20px;
             text-align: center;
-            padding: 1em;
         }
-
-        /* 메인 컨텐츠 스타일 */
-        main {
-            padding: 1em;
+        
+        .container {
+            padding: 20px;
             display: flex;
-            flex-direction: column; /* 기본 방향 */
-            gap: 1em; /* 섹션 간 간격 */
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
         }
-
-        .content {
-            padding: 1em;
-            background-color: #f5f5f5;
-            border: 1px solid #ddd;
+        
+        .box {
+            width: calc(33.33% - 20px);
+            background-color: #f0f0f0;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
         }
-
-        /* 미디어 쿼리: 너비 600px 이상일 때 */
-        @media (min-width: 600px) {
-            main {
-                flex-direction: row; /* 큰 화면에서는 로우 방향 */
-                justify-content: space-around; /* 섹션 간 일정한 간격 */
+        
+        .divider {
+            width: calc(50% - 20px);
+            background-color: #ccc;
+            height: 100px;
+            margin: 10px;
+        }
+        
+        /* 미디어 쿼리: 모바일 기기에 맞춤 */
+        @media (max-width: 767px) {
+            .container {
+                flex-direction: column;
             }
-
-            .content {
-                flex: 1; /* 모든 .content가 동일한 비율로 확장 */
+            
+            .box, .divider {
+                width: calc(100% - 40px);
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>경제 개념 알아보기</h1>
-    </header>
-    <main>
-        <div class="content">
-            <h2>섹션 1</h2>
-            <p>이곳은 첫 번째 섹션입니다.</p>
-        </div>
-        <div class="content">
-            <h2>섹션 2</h2>
-            <p>이곳은 두 번째 섹션입니다. 가운데에 배치됩니다.</p>
-        </div>
-        <div class="content">
-            <h2>섹션 3</h2>
-            <p>이곳은 세 번째 섹션입니다.</p>
-        </div>
-    </main>
+    <div class="header">
+        <h1>모바일 기기를 위한 반응형 웹페이지</h1>
+    </div>
+    
+    <div class="container">
+        <!-- 3개의 박스 -->
+        <div class="box">박스 1</div>
+        <div class="box">박스 2</div>
+        <div class="box">박스 3</div>
+        
+        <!-- 구분선 -->
+        <div class="divider"></div>
+        <div class="divider"></div>
+        <div class="divider"></div>
+        <div class="divider"></div>
+        <div class="divider"></div>
+        <div class="divider"></div>
+    </div>
 </body>
 </html>
